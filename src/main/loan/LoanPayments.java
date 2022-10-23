@@ -14,9 +14,22 @@ public class LoanPayments {
         // TODO code application logic here
         int loanAmount,numOfYears;
         final double monthlyInterestRate = 2.3;
-
         
-//        i love java
+        Scanner input = new Scanner (System.in);
+        
+        System.out.print(" Enter loan amount : ");
+         loanAmount = input.nextInt();
+         
+         System.out.print(" Enter number of years : ");
+         numOfYears = input.nextInt();
+         
+         System.out.print("Monthly payment for the loan is : ");
+         System.out.println((loanAmount*monthlyInterestRate)/(1-(1/Math.pow(1+ monthlyInterestRate,numOfYears*12))));
+         
+         input.close();
+         
+        
+        
         
     }
     
